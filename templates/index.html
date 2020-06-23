@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'content' %}
+    <div>
+        <div class="p-3 font-weight-bold mt-4" style="font-size: 2.5em;">
+            <b>Save your <span style="color: #00bfa6;">notes</span> online</b>
+            with custom<span style="color: #00bfa6;"> hashtags </span>to help you categorize your notes.
+        </div>
+        <p class="pl-3 pt-n3 lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eius corporis quae itaque! Quaerat ducimus fuga tenetur assumenda voluptatibus hic?</p>
+    </div>
+    <div class="row pl-4">
+        <div class="col-sm-5">
+            <a class="btn font-weight-bold p-3" style="background-color: #00bfa6; width: 100%" href="/accounts/register">Create an account</a>
+        </div>
+        <div class=""></div>
+        <div class="col-sm-5">
+            <a class="btn p-3 font-weight-bold" style="border: 1px solid #00bfa6; color: #00bfa6; width: 100%" href="/accounts/login">Login</a>
+        </div>
+    </div>
+{% endblock 'content' %}

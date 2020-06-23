@@ -1,0 +1,131 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>eNotes : Home</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="{% static '/images/favicon.ico' %}"/>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sticky-footer-navbar/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static '/css/bootswatch_bootstrap.min.css' %}">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="{% static '/css/sticky-footer-navbar.css' %}" rel="stylesheet">
+    <!-- CSS -->
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/main.css' %}">
+</head>
+<body class="d-flex flex-column min-vh-100">
+<!-- Begin page content -->
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary font-weight-bold">
+        <a class="navbar-brand" href="#">
+            <span style="color: #00bfa6; text-transform: lowercase">e</span>Notes
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link  text-white" href="/accounts/login">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main role="main" class="flex-shrink-0 vh-100" style="background-color: #f0f0f0">
+    <div class="container">
+        <!-- <h1 class="mt-5">Sticky footer with fixed navbar</h1> -->
+        <div class="row mt-n5">
+            <div class="col-3 py-5">
+                <h4 class="">Add Tag</h4>
+                <form action="" method="post">
+                    <fieldset>
+                        <div class="from-group mb-3">
+                            <input type="text" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Add tag</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-8 bg-light px-3 py-5">
+                <div class="mb-5" style="">
+                    <h4 class="">Add new note</h4>
+                    <form action="notes" method="POST">
+                        {% csrf_token %}
+                        <fieldset>
+                            <div class="form-group">
+                                <!-- <label for="exampleTextarea">Example textarea</label> -->
+                                <textarea class="form-control bg-white" name="notes" style="border: 3px solid #00bfa6" id="exampleTextarea" rows="4"></textarea>
+                                <small id="noteHelp" class="form-text text-muted">You can add tags by adding # to the
+                                    tag name example: #python #coding</small>
+                            </div>
+                            {% comment %} <div class="form-group">
+                                <div class="input-group mb-3">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile02">
+                                    <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                                </div>
+                                </div>
+                            </div> {% endcomment %}
+                            <button type="submit" class="btn btn-primary">Save note</button>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active">
+                        Cras justo odio
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action disabled">Morbi leo risus
+                    </a>
+                </div>
+            </div>
+        </div>
+</main>
+
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+    </footer>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <!-- Popper.js -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static '/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

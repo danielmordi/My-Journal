@@ -1,0 +1,102 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>eNotes : Home</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="{% static '/images/favicon.ico' %}"/>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sticky-footer-navbar/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static '/css/bootswatch_bootstrap.min.css' %}">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="{% static '/css/sticky-footer-navbar.css' %}" rel="stylesheet">
+    <!-- CSS -->
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/main.css' %}">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-md navbar-light mb-4 font-weight-bold">
+        <a class="navbar-brand" href="#">
+            <span style="color: #00bfa6; text-transform: lowercase">e</span>Notes
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/accounts/register">Sign up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/accounts/login">Log in</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Main content -->
+    <div class="hero-content mt-n3">
+        <div class="row " style="margin-right: 15px; margin-left: 15px;">
+            <div class="col-lg-6 col-md-6 col-sm-12 p-4">
+                <div class="hero-img " style="padding: 5em 8em 0 8em">
+                    <img src="{% static 'images/undraw_placeholders_rklh.svg' %}" alt="hero-img">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 p-5">            
+                {% block 'content' %}
+
+                <!-- Main content -->
+
+                {% endblock 'content' %}
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+    </footer>
+    <!-- Jquery -->
+    <script src="{% static 'js/jquery-v3.js' %}"></script>
+    <!-- Popper.js -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static '/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
